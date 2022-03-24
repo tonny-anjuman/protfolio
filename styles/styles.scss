@@ -16,6 +16,7 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 body {
   background-color: var(--color-primary);
@@ -45,31 +46,38 @@ section {
   padding: 3rem 18rem;
 }
 .section {
-  transform: translateY(-100%);
+  transform: translateY(-100%) scale(1);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
 }
 .sec1 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(90, 205, 105);
 }
 .sec2 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 .sec3 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(67, 150, 111);
 }
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
+  background-color: rgb(90, 205, 109);
 }
 .sec5 {
   display: none;
   transform: translateY(0) scale(1);
 }
+
+//controler
 .controlls {
+  display: none;
   position: fixed;
   z-index: 10;
   top: 50%;
@@ -79,6 +87,13 @@ section {
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
+  .active-btn {
+    background-color: var(--color-secondary) !important;
+    transition: all 0.4s ease-in-out;
+    i {
+      color: var(--color-white);
+    }
+  }
   .control {
     padding: 1rem;
     cursor: pointer;
@@ -86,5 +101,15 @@ section {
     width: 55px;
     height: 55px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7rem 0;
+    box-shadow: var(--box-shadow-1);
+    i {
+      font-size: 1.2rem;
+      color: var(--color-grey-2);
+      pointer-events: none;
+    }
   }
 }
