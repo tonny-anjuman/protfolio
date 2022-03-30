@@ -233,6 +233,86 @@ section {
       }
     }
   }
+
+  .left-about {
+    padding-right: 5rem;
+    p {
+      line-height: 2rem;
+      padding: 1rem;
+      color: var(--color-grey-1);
+    }
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.about-stats {
+  padding-bottom: 4rem;
+  .progress-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    .progress-bar {
+      display: grid;
+      flex-direction: column;
+      .prog-title {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .progress-con {
+        display: flex;
+        align-items: center;
+        .prog-text {
+          color: var(--color-grey-2);
+        }
+        .progress {
+          width: 100%;
+          height: 0.45rem;
+          background-color: var(--color-grey-4);
+          margin-left: 1rem;
+          position: relative;
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: var(--color-secondary);
+            transition: all 0.4s ease-in-out;
+            width: 80%;
+          }
+
+          .html {
+            width: 90%;
+          }
+          .css {
+            width: 80%;
+          }
+          .javascript {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stat-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3.5rem 0;
+  position: relative;
+  &::before {
+    content: "";
+    left: 50%;
+    top: 0;
+    width: 40%;
+    height: 1px;
+    background-color: var(--color-grey-5);
+    transform: translateX(-50%);
+  }
 }
 
 //independent components
